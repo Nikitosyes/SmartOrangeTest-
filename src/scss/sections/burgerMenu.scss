@@ -1,0 +1,99 @@
+.menu-burger {
+  @include medium-size-mobile {
+    display: none;
+  }
+}
+
+.burger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 40;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.2s ease, pointer-events 0.2s ease, visibility 0.2s ease;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+  }
+
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background: white;
+  }
+
+  &-icon {
+    cursor: pointer;
+    &:hover {
+      transform: scale(110%);
+    }
+  }
+
+  &__body {
+    position: fixed;
+    padding: 145px 15px 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    overflow: auto;
+    height: 100vh;
+    transform: translateX(100%);
+    z-index: 60;
+    position: relative;
+    transition: all 0.4s ease, opacity 0.2s ease, visibility 0.2s ease;
+
+    &.active {
+      transform: translate(0);
+    }
+  }
+
+  &__menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 0 10px;
+
+    a {
+      color: #ffffff;
+      font-size: 32px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    width: 70px;
+    height: 45px;
+    top: 25px;
+    left: 15px;
+    z-index: 70;
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    z-index: 70;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(110%);
+    }
+  }
+}

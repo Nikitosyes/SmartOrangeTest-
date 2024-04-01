@@ -1,0 +1,154 @@
+.container__intro {
+  @include medium-size-mobile {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+}
+
+.intro {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 15px;
+
+  @include large-size-mobile {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 120px;
+    height: calc(100vh - 100px);
+  }
+
+  &__heading {
+    font-size: 40px;
+    @include TTHoves-light;
+    color: #bdbdbd;
+    font-weight: 300;
+    text-transform: uppercase;
+
+    @include medium-size-mobile {
+      font-size: 64px;
+    }
+
+    span {
+      color: #333333;
+      @include TTHoves-bold;
+    }
+  }
+
+  &__swiper {
+    //  outline: 5px solid green;
+    height: 400px;
+    overflow: hidden;
+
+    @include medium-size-mobile {
+      height: 550px;
+    }
+
+    @include large-size-mobile {
+      height: 90%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__swiper-modules {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 10px;
+
+    @include medium-size-mobile {
+      padding: 0px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @include large-size-mobile {
+      flex-direction: column;
+      justify-content: center;
+      gap: 90px;
+    }
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: relative;
+
+  a {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #ffffff;
+    padding: 25px 50px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    letter-spacing: 2px;
+    color: #333333;
+    transition: all 0.2s ease;
+
+    @include small-size {
+      padding: 15px 25px;
+    }
+
+    &:hover {
+      gap: 30px;
+      letter-spacing: 3px;
+      background: #c7c5c5;
+    }
+  }
+}
+
+.swiper-btn__wrapper {
+  display: flex;
+  gap: 28px;
+
+  .swiper-btnLeft,
+  .swiper-btnRight {
+    width: fit-content;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #f2f2f2;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: #cfcece;
+    }
+  }
+}
+
+.slider-pagination {
+  display: flex;
+  gap: 90px;
+}
+.swiper-pagination-current,
+.swiper-pagination-total {
+  color: #bdbdbd;
+  font-size: 24px;
+  position: relative;
+}
+
+.swiper-pagination-current {
+  &::after {
+    content: "";
+    background: #bdbdbd;
+    width: 1px;
+    height: 50px;
+    position: absolute;
+    right: -45px;
+    top: -15px;
+    transform: rotate(45deg);
+    opacity: 0.8;
+  }
+}
