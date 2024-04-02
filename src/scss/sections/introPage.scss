@@ -36,11 +36,10 @@
   }
 
   &__swiper {
-    //  outline: 5px solid green;
-    height: 400px;
+    height: 370px;
     overflow: hidden;
 
-    @include medium-size-mobile {
+    @include small-size-mobile {
       height: 550px;
     }
 
@@ -72,6 +71,12 @@
       gap: 90px;
     }
   }
+
+  &__controllers {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
 }
 
 .swiper {
@@ -86,24 +91,6 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    background: #ffffff;
-    padding: 25px 50px;
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    letter-spacing: 2px;
-    color: #333333;
-    transition: all 0.2s ease;
-
-    @include small-size {
-      padding: 15px 25px;
-    }
-
-    &:hover {
-      gap: 30px;
-      letter-spacing: 3px;
-      background: #c7c5c5;
-    }
   }
 }
 
@@ -131,6 +118,11 @@
 .slider-pagination {
   display: flex;
   gap: 90px;
+  justify-content: end;
+
+  @include small-size-mobile {
+    justify-content: start;
+  }
 }
 .swiper-pagination-current,
 .swiper-pagination-total {

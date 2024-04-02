@@ -1,0 +1,41 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.heading {
+  font-size: 40px;
+  @include TTHoves-light;
+  color: $gray4;
+  letter-spacing: 2px;
+  line-height: 43px;
+  @include medium-size-mobile {
+    font-size: 64px;
+  }
+}
+
+.link-info {
+  width: fit-content;
+  background: #ffffff;
+  padding: 25px 50px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  letter-spacing: 2px;
+  color: #333333;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 1;
+
+  @include small-size {
+    padding: 15px 25px;
+  }
+
+  &:hover {
+    gap: 30px;
+    letter-spacing: 3px;
+    background: #c7c5c5;
+  }
+}

@@ -1,46 +1,36 @@
 @font-face {
   font-family: "TTHoves Bold";
   src: url("../../fonts/TTHoves-Bold.woff2") format("woff2");
-  font-weight: bold;
   font-style: normal;
 }
-
 @font-face {
   font-family: "TTHoves Regular";
   src: url("../../fonts/TTHoves-Regular.woff2") format("woff2");
-  font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "TTHoves Light";
   src: url("../../fonts/TTHoves-Light.woff2") format("woff2");
-  font-weight: 300;
   font-style: normal;
+  font-weight: 300;
 }
-
 @font-face {
   font-family: "TTHoves Medium";
   src: url("../../fonts/TTHoves-Medium.woff2") format("woff2");
-  font-weight: 500;
   font-style: normal;
 }
-
 @mixin TTHoves-bold {
   font-family: "TTHoves Bold", sans-serif;
-  font-weight: bold;
+  font-weight: 700;
 }
-
 @mixin TTHoves-regular {
   font-family: "TTHoves Regular", sans-serif;
-  font-weight: normal;
+  font-weight: 400;
 }
-
 @mixin TTHoves-light {
   font-family: "TTHoves Light", sans-serif;
   font-weight: 300;
 }
-
 @mixin TTHoves-medium {
   font-family: "TTHoves Medium", sans-serif;
   font-weight: 500;
@@ -61,4 +51,14 @@
 @import url(https://fonts.googleapis.com/css?family=Gothic+A1:regular);
 @mixin gothic-font {
   font-family: "Gothic A1", sans-serif;
+}
+
+@font-face {
+  font-family: "San Francisco Pro Display Regular";
+  src: url("../../fonts/SFProDisplay-Regular.woff2") format("woff2");
+  font-style: normal;
+}
+
+@mixin SFPRO {
+  font-family: "San Francisco Pro Display Regular";
 }

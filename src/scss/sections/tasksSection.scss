@@ -1,0 +1,61 @@
+.tasks {
+  margin-top: 40px;
+  @include medium-size-mobile {
+    margin-top: 120px;
+  }
+}
+
+.tasks {
+  &__flex {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    @include small-size-mobile {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @include medium-size-mobile {
+      margin-top: 60px;
+    }
+
+    @include large-size-mobile {
+      gap: 170px;
+    }
+  }
+  &__col {
+    display: flex;
+    gap: 15px;
+
+    @include medium-size-mobile {
+      gap: 30px;
+    }
+  }
+  &__col-number {
+    color: $gray6;
+    @include SFPRO;
+    font-size: 180px;
+    font-weight: 700;
+  }
+
+  &__col-numberImg {
+  }
+
+  &__col-text {
+    font-size: 16px;
+    align-self: center;
+    text-align: center;
+
+    @include medium-size-mobile {
+      font-size: 22px;
+    }
+
+    @include large-size-mobile {
+      line-height: 1.5;
+      text-align: left;
+      align-self: start;
+    }
+  }
+}
