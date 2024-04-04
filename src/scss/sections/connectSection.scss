@@ -1,6 +1,7 @@
 .connect {
   margin-top: 40px;
   overflow: hidden;
+  padding-top: 5px;
 
   @include medium-size-mobile {
     margin-top: 140px;
@@ -74,7 +75,6 @@
 }
 
 .submit-btn {
-  transition: all 0.3s ease !important;
   @include medium-size-mobile {
     margin-top: 21px;
   }
