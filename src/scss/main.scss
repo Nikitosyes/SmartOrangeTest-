@@ -9,6 +9,8 @@
 @import "./sections/aboutSection.scss";
 @import "./sections/tasksSection.scss";
 @import "./sections/projectsSection.scss";
+@import "./sections/connectSection.scss";
+@import "./sections//footer.scss";
 
 body {
   font-size: 18px;
@@ -28,5 +30,11 @@ body {
 
 .main {
   flex: 1 1 auto;
-  padding-bottom: 100px;
+  margin-bottom: 40px;
+  height: auto;
+  width: 100%;
+  
+  @include medium-size-mobile {
+    margin-bottom: 120px;
+  }
 }

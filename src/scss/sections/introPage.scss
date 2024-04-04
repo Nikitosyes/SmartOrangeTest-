@@ -63,11 +63,13 @@
       padding: 0px;
       flex-direction: row;
       justify-content: space-between;
+      align-items: center;
     }
 
     @include large-size-mobile {
       flex-direction: column;
       justify-content: center;
+      align-items: start;
       gap: 90px;
     }
   }
@@ -76,6 +78,15 @@
     display: flex;
     align-items: center;
     gap: 50px;
+
+    @include medium-size-mobile {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    @include large-size-mobile {
+      gap: 50px;
+    }
   }
 }
 
@@ -96,7 +107,7 @@
 
 .swiper-btn__wrapper {
   display: flex;
-  gap: 28px;
+  gap: 10px;
 
   .swiper-btnLeft,
   .swiper-btnRight {
@@ -117,11 +128,15 @@
 
 .slider-pagination {
   display: flex;
-  gap: 90px;
+  gap: 40px;
   justify-content: end;
 
   @include small-size-mobile {
     justify-content: start;
+  }
+
+  @include medium-size-mobile {
+    gap: 45px;
   }
 }
 .swiper-pagination-current,
@@ -138,9 +153,13 @@
     width: 1px;
     height: 50px;
     position: absolute;
-    right: -45px;
+    right: -20px;
     top: -15px;
     transform: rotate(45deg);
     opacity: 0.8;
+  }
+
+  @include medium-size-mobile {
+    right: -5px;
   }
 }

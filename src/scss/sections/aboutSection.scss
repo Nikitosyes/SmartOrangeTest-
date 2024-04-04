@@ -21,6 +21,7 @@
     @include small-size-mobile {
       flex-direction: row;
       flex-wrap: wrap;
+      padding: 30px 0 0 0;
     }
 
     @include large-size-mobile {
@@ -117,9 +118,5 @@
       order: 3;
       gap: 30px;
     }
-  }
-}
-.link {
-  &-info {
   }
 }
