@@ -2,8 +2,10 @@
   background: #2c2c2c;
   padding: 58px 0 25px 0;
   position: relative;
+  min-height: fit-content;
 
   &__flex {
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     gap: 50px;
