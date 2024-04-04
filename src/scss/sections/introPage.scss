@@ -6,6 +6,10 @@
   }
 }
 
+.intro__section {
+  overflow: hidden;
+}
+
 .intro {
   display: flex;
   flex-direction: column-reverse;
