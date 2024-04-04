@@ -47,7 +47,8 @@
   &__socials {
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    flex-wrap: wrap;
+    gap: 5px;
 
     li {
       cursor: pointer;
