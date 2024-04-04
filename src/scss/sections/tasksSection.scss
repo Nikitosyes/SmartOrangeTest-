@@ -6,6 +6,7 @@
 }
 
 .tasks {
+  overflow: hidden;
   &__flex {
     margin-top: 35px;
     display: flex;
