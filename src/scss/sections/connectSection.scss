@@ -74,6 +74,7 @@
 }
 
 .submit-btn {
+  transition: all 0.3s ease !important;
   @include medium-size-mobile {
     margin-top: 21px;
   }

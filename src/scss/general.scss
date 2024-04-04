@@ -43,6 +43,7 @@
 .link-info-dark {
   background: #333333;
   color: #ffffff;
+  transition: all 0.2s ease;
 
   &:hover {
     gap: 30px;
